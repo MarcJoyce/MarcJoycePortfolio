@@ -8,8 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && git",
-    "git": "git add dist -f && git commit -m 'Adding dist' && git subtree push --prefix dist origin gh-pages"
+    "predeploy": "npm run build && deploy",
+    "deploy": "git add dist -f && git commit -m 'Adding dist' && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
