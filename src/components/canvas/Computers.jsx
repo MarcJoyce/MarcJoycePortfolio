@@ -11,7 +11,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6 : 0.75}
+        scale={isMobile ? 0.5 : 0.75}
         position={isMobile ? [-3.5, -2, -1] : [0, -2, 0]}
         rotation={[0, 1.5, 0]}
       />
@@ -51,14 +51,17 @@ const ComputerCanvas = () => {
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      style={{ overflow: "scroll", touchAction: 'auto' }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enablePan={false}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        {/* <OrbitControls
+          enabled={false}
+          autoRotate
+          // enablePan={false}
+          // enableZoom={false}
+          // maxPolarAngle={Math.PI / 2}
+          // minPolarAngle={Math.PI / 2}
+        /> */}
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
