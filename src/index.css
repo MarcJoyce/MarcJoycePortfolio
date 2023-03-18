@@ -170,6 +170,10 @@
   transform: translateZ(0);
 }
 
+.canvas-wrapper { 
+  touch-action: pan-y !important;
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {

@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./ultrawide_monitor/scene.gltf");
+  const computer = useGLTF("./ultrawide_monitor.glb");
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor={"black"} />
@@ -12,7 +12,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.5 : 0.75}
-        position={isMobile ? [-3.5, -2, -1] : [0, -2, 0]}
+        position={isMobile ? [0, -2, 0] : [0, -2, 0]}
         rotation={[0, 1.5, 0]}
       />
       <spotLight
@@ -51,16 +51,16 @@ const ComputerCanvas = () => {
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      className='canvas-wrapper'
     >
       <Suspense fallback={<CanvasLoader />}>
-        {/* <OrbitControls
-          enabled={false}
+        <OrbitControls
           autoRotate
-          // enablePan={false}
-          // enableZoom={false}
-          // maxPolarAngle={Math.PI / 2}
-          // minPolarAngle={Math.PI / 2}
-        /> */}
+          enablePan={false}
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
