@@ -8,7 +8,6 @@ const Tech = () => {
   return (
     <>
       <motion.div
-      // variants={textVariant()}
       >
         <p className={styles.sectionSubText}>I drink coffee and I know things</p>
         <h2 className={styles.sectionHeadText}>Tech.</h2>

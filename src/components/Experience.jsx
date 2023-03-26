@@ -59,7 +59,6 @@ const Experience = () => {
   return (
     <>
       <motion.div
-        // variants={textVariant()}
       >
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far

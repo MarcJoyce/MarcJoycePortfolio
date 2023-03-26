@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 import ReactGA from 'react-ga';
 
 const App = () => {
@@ -12,8 +11,18 @@ const App = () => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
+  const About = React.lazy(() => import('./components/About'));
+  const Contact = React.lazy(() => import('./components/Contact'));
+  const Experience = React.lazy(() => import('./components/Experience'));
+  const Hero = React.lazy(() => import('./components/Hero'));
+  const Navbar = React.lazy(() => import('./components/Navbar'));
+  const Tech = React.lazy(() => import('./components/Tech'));
+  const Works = React.lazy(() => import('./components/Works'));
+  const StarsCanvas = React.lazy(() => import('./components/canvas/Stars'));
+
   return (
     <BrowserRouter>
+    <Suspense fallback={<></>}>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
@@ -23,12 +32,12 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
-        {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
       </div>
+      </Suspense>
       </BrowserRouter>
   )
 }
