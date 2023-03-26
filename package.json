@@ -8,8 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build && npm run deploy",
-    "deploy": "git add dist -f && git commit -m 'Adding dist' && git subtree push --prefix dist origin gh-pages",
+    "build:push": "npm run build && git add dist -f && git commit -m 'Adding dist' && git subtree push --prefix dist origin gh-pages",
     "subtreepush": "git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "dependencies": {

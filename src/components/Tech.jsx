@@ -25,7 +25,7 @@ const Tech = () => {
               key={tech.name}
               className="sm:w-24 sm:h-24 w-16 h-16 flex flex-col justify-center"
             >
-              <img src={tech.icon} alt={tech.name} />
+              <img src={tech.icon} alt={tech.name} className='w-full h-full'/>
               <p className="mx-auto text-[12px] sm:text-[16px] whitespace-nowrap ">
                 {tech.name}
               </p>
