@@ -142,7 +142,7 @@ const experiences = [
     points: [
       "Develop reports dashboard for pharmacies to view their customers current and historic ordering",
       "Streamlined continuous integration pipelines adding audit and validation",
-      "Mentored others in the team as the department transitions towards a Full-stack enviornment",
+      "Mentored others in the team as the department transitions towards a Full-stack environment",
     ],
   },
   {
