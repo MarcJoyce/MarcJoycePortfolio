@@ -24,8 +24,8 @@ const Tech = () => {
               key={tech.name}
               className="sm:w-24 sm:h-24 w-16 h-16 flex flex-col justify-center"
             >
-              <img src={tech.icon} alt={tech.name} className='w-full h-full'/>
-              <p className={`mx-auto text-[12px] sm:text-[16px] whitespace-nowrap ${tech.name === 'Three JS'} && 'icon-white`} >
+              <img src={tech.icon} alt={tech.name} className='w-full h-full' style={ tech.name === 'Three JS' && {filter:'invert(100%) sepia(0%) saturate(100%) hue-rotate(180deg) brightness(100%) contrast(100%)'}}/>
+              <p className={`mx-auto text-[12px] sm:text-[16px] whitespace-nowrap`} >
                 {tech.name}
               </p>
             </div>
