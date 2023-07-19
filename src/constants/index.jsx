@@ -140,6 +140,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Oct 2022",
     points: [
+      "Development of RESTful API's to support developers across the full stack",
+      "Onboarding and support for developers working across multiple products and functions",
       "Develop reports dashboard for pharmacies to view their customers current and historic ordering",
       "Streamlined continuous integration pipelines adding audit and validation",
       "Mentored others in the team as the department transitions towards a Full-stack environment",
