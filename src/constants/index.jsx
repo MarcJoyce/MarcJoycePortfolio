@@ -314,28 +314,28 @@ const projects = [
     source_code_link: 'https://github.com/MarcJoyce/SWGProfessionCalculator',
     live_link: "https://marcjoyce.github.io/SWGProfessionCalculator/",
   },
-  // {
-  //   name: "SWG Utility Calculators",
-  //   description:
-  //     "A collection of utility calculators to aid in aspects of the Star Wars themed MMO",
-  //   tags: [
-  //     {
-  //       name: "html",
-  //       color: "red-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "javascript",
-  //       color: "yellow-text-gradient",
-  //     },
-  //   ],
-  //   image: swgutils,
-  //   // source_code_link: 'https://github.com/MarcJoyce/SWGProfessionCalculator',
-  //   live_link: "https://marcjoyce.com/#/SWG/",
-  // },
+  {
+    name: "SWG Utility Calculators",
+    description:
+      "A collection of utility calculators to aid in aspects of the Star Wars themed MMO",
+    tags: [
+      {
+        name: "html",
+        color: "red-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: swgutils,
+    // source_code_link: 'https://github.com/MarcJoyce/SWGProfessionCalculator',
+    live_link: "https://marcjoyce.com/#/SWG/",
+  },
   {
     name: "Father and Son The Karaoke Kings",
     description:

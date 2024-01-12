@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -34,7 +35,7 @@ const Navbar = () => {
                 setActive(link.title);
               }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <HashLink smooth to={`/#${link.id}`}>{link.title}</HashLink>
             </li>
           ))}
         </ul>

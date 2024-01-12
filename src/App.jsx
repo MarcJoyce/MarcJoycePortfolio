@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ReactGA from "react-ga";
 
 import { Home, SWG } from './components';
@@ -14,7 +14,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename={`/${import.meta.env.BASE_URL}`}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/SWG" element={<SWG />} />
